@@ -14,10 +14,8 @@ CREATE TABLE favorites (
   userId TEXT NOT NULL,
   movieId INTEGER NOT NULL,
   memo TEXT NOT NULL DEFAULT '',
-  UNIQUE (userId, movieId)
-  -- 외래 키를 추가할 때 위 UNIQUE 제약조건 끝에 쉼표를 추가합니다.
-  -- TODO 13 [과제 3]: movieId가 movies.id를 참조하는 외래 키를 작성하세요.
-  -- 마지막 제약조건 뒤에는 쉼표를 붙이지 않습니다.
+  UNIQUE (userId, movieId),
+  FOREIGN KEY (movieId) REFERENCES movies(id)
 );
 -- TODO 전에도 초기화 자체는 실행됩니다. 그러나 중복·외래 키 차단은 아직 동작하지 않습니다.
 -- 데이터 8건이 보인다는 사실만으로 과제 3을 완료한 것은 아닙니다.
