@@ -22,6 +22,8 @@ SELECT * FROM favorites WHERE id = 30;
 -- 삭제 대상 확인(제공 코드)
 SELECT * FROM favorites WHERE id = 30;
 -- TODO 11: WHERE로 id 30의 찜만 삭제.
+DELETE FROM favorites
+WHERE id = 30;
 
 SELECT * FROM favorites WHERE id = 30;
 -- 기대: 0행.
