@@ -2,6 +2,9 @@
 -- 각 TODO 아래에 완성한 SQL을 저장하고, 한 문장씩 실행하세요.
 
 -- TODO 05 [과제 4]: 영화 101의 userId, memo만 조회. 기대: 3행(행 순서는 무관).
+SELECT userId, memo
+FROM favorites
+WHERE movieId = 101;
 
 -- TODO 06 [과제 4]: AND로 user-a와 영화 104 조건을 연결해 memo만 조회.
 -- 기대: '가족과 볼 영화' 1행.
