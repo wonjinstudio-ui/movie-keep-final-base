@@ -21,6 +21,10 @@ ORDER BY movieId DESC
 LIMIT 1;
 
 -- TODO 08 [과제 4]: TODO 07에서 LIMIT만 제외한 별도 SQL. 기대: 103 → 101 두 행.
+SELECT movieId, memo
+FROM favorites
+WHERE userId = 'user-c'
+ORDER BY movieId DESC;
 
 -- TODO 14 [과제 7]: JOIN으로 빈 메모의 favorites.userId, movies.title, favorites.memo 조회.
 -- favorites.movieId와 movies.id가 같은 행끼리 연결. favorites.id 오름차순.
