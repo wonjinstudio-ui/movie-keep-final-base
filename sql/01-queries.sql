@@ -29,6 +29,11 @@ ORDER BY movieId DESC;
 -- TODO 14 [과제 7]: JOIN으로 빈 메모의 favorites.userId, movies.title, favorites.memo 조회.
 -- favorites.movieId와 movies.id가 같은 행끼리 연결. favorites.id 오름차순.
 -- 기대: user-a/인터스텔라/빈 메모, user-b/어벤져스/빈 메모.
+SELECT favorites.userId, movies.title, favorites.memo
+FROM favorites
+JOIN movies ON favorites.movieId = movies.id
+WHERE favorites.memo = ''
+ORDER BY favorites.id ASC;
 
 -- TODO 15 [과제 7]: 빈 메모의 전체 건수를 COUNT(*)로 계산. 열 이름은 emptyMemoCount.
 -- 기대: 숫자 2인 결과 한 행. 결과 열은 emptyMemoCount만 사용.
