@@ -8,6 +8,9 @@ WHERE movieId = 101;
 
 -- TODO 06 [과제 4]: AND로 user-a와 영화 104 조건을 연결해 memo만 조회.
 -- 기대: '가족과 볼 영화' 1행.
+SELECT memo
+FROM favorites
+WHERE userId = 'user-a' AND movieId = 104;
 
 -- TODO 07 [과제 4]: user-c의 movieId, memo를 영화 ID 내림차순으로 정렬해 1건 조회.
 -- 기대: movieId 103, '다시 보고 싶은 영화'.
