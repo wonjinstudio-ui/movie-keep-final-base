@@ -12,6 +12,9 @@ SELECT COUNT(*) AS favoriteCount FROM favorites;
 -- 수정 대상 확인(제공 코드)
 SELECT * FROM favorites WHERE id = 30;
 -- TODO 10: WHERE로 id 30만 지정해 memo를 '주말에 다시 보기'로 수정.
+UPDATE favorites
+SET memo = '주말에 다시 보기'
+WHERE id = 30;
 
 SELECT * FROM favorites WHERE id = 30;
 -- 기대: memo만 바뀌고 id/userId/movieId는 유지.
