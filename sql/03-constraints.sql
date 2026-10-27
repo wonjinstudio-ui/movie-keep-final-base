@@ -11,6 +11,8 @@ VALUES (40, 'user-a', 101);
 -- B: id 41로 user-b의 영화 106 찜 추가. memo는 생략.
 -- 예상: 성공. 같은 영화는 서로 다른 사용자가 찜할 수 있습니다.
 -- 작성 SQL:
+INSERT INTO favorites (id, userId, movieId)
+VALUES (41, 'user-b', 106);
 
 -- C: id 42로 user-b의 영화 999 찜 추가. memo는 생략.
 -- 예상: FOREIGN KEY 오류.
