@@ -14,6 +14,11 @@ WHERE userId = 'user-a' AND movieId = 104;
 
 -- TODO 07 [과제 4]: user-c의 movieId, memo를 영화 ID 내림차순으로 정렬해 1건 조회.
 -- 기대: movieId 103, '다시 보고 싶은 영화'.
+SELECT movieId, memo
+FROM favorites
+WHERE userId = 'user-c'
+ORDER BY movieId DESC
+LIMIT 1;
 
 -- TODO 08 [과제 4]: TODO 07에서 LIMIT만 제외한 별도 SQL. 기대: 103 → 101 두 행.
 
