@@ -2,6 +2,8 @@
 -- 매 단계 SQL과 SELECT를 함께 기록하세요. 같은 INSERT를 반복하지 않습니다.
 
 -- TODO 09: id 30, user-b, 영화 106인 찜을 추가. memo 열은 INSERT에서 생략.
+INSERT INTO favorites (id, userId, movieId)
+VALUES (30, 'user-b', 106);
 
 SELECT * FROM favorites WHERE id = 30;
 -- 기대: (30, user-b, 106, 빈 문자열), 전체 9건.
