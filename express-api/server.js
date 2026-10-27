@@ -18,8 +18,9 @@ app.get("/", (req, res) => {
   res.json({ message: "MovieKeep 찜 API 서버입니다." });
 });
 
-// TODO 17 [과제 8]: app.get()으로 /api/favorites의 GET 요청을 등록하고
-// res.json()으로 favorites 배열을 응답하세요.
+app.get("/api/favorites", (req, res) => {
+  res.json(favorites);
+});
 
 // TODO 18 [과제 8]: /api/favorite-count의 GET 요청을 등록하고
 // favoriteCount 속성을 가진 객체를 응답하세요. 값은 favorites.length로 계산합니다.
