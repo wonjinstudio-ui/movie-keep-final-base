@@ -47,8 +47,7 @@ export default function AuthButton() {
           return {
             userId: data.userId,
             movieId: data.movieId,
-            // TODO 04 [과제 2]: data.memo가 null/undefined이면 ??로 빈 문자열을 사용하세요.
-            memo: "",
+            memo: data.memo ?? "",
           };
         });
         setFavorites(() => favoriteList);
