@@ -23,6 +23,8 @@ VALUES (42, 'user-b', 999);
 -- D: movies에서 id 106인 영화 삭제.
 -- 예상: FOREIGN KEY 오류.
 -- 작성 SQL:
+DELETE FROM movies
+WHERE id = 106;
 
 -- D 실행 후 확인(제공 코드): 초기 8건과 테스트 id 41인 찜, 영화 106이 남아야 합니다.
 SELECT * FROM favorites ORDER BY id ASC;
