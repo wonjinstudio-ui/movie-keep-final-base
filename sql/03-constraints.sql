@@ -17,6 +17,8 @@ VALUES (41, 'user-b', 106);
 -- C: id 42로 user-b의 영화 999 찜 추가. memo는 생략.
 -- 예상: FOREIGN KEY 오류.
 -- 작성 SQL:
+INSERT INTO favorites (id, userId, movieId)
+VALUES (42, 'user-b', 999);
 
 -- D: movies에서 id 106인 영화 삭제.
 -- 예상: FOREIGN KEY 오류.
