@@ -5,6 +5,8 @@
 -- A: id 40으로 user-a의 영화 101 찜 추가. memo는 생략.
 -- 예상: UNIQUE 오류. id가 달라도 사용자+영화가 기존 1번과 같습니다.
 -- 작성 SQL:
+INSERT INTO favorites (id, userId, movieId)
+VALUES (40, 'user-a', 101);
 
 -- B: id 41로 user-b의 영화 106 찜 추가. memo는 생략.
 -- 예상: 성공. 같은 영화는 서로 다른 사용자가 찜할 수 있습니다.
