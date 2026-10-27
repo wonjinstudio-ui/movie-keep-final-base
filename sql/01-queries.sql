@@ -43,3 +43,8 @@ WHERE memo = '';
 
 -- TODO 16 [과제 7]: 빈 메모만 선택한 뒤 userId로 GROUP BY.
 -- userId, emptyMemoCount 열을 반환하고 userId 오름차순. 기대: user-a 1, user-b 1.
+SELECT userId, COUNT(*) AS emptyMemoCount
+FROM favorites
+WHERE memo = ''
+GROUP BY userId
+ORDER BY userId ASC;
